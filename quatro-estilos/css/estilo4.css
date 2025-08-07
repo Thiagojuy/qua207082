@@ -2,6 +2,7 @@ body{
     background-color: black;
     color: #84c754;
     font: 100% "Courier New";
+    line-height: 22px;
 }
 
 #top{
@@ -25,15 +26,52 @@ li:hover{
     margin: 15px;
 }
 
-#wrapper{
+.wrapper{
     position: relative;
 }
 
 #sidebar{
-    background-color: red;
     position: absolute;
     right: 0;
     top: 0;
-    width: 320px; 
+    color: white;
+    width: 320px;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 80%;
+    line-height: 20px;
+}
 
+
+a{
+color: white;
+}
+
+a:hover{
+color: #84c754;
+}
+
+#bottom{
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 70%;
+    line-height: 14px;
+    margin: 15px;
+    text-align: center;
+}
+
+:nth-child(4){
+color: white;
+font-weight: bold;
+}
+
+@media (max-width: 700px){
+    #sidebar{
+        position: relative;
+        width: auto;
+        margin: 15px;
+    }
 }
