@@ -10,17 +10,16 @@ padding: 15px;
 }
 
 #top h1, #top p, ul { 
-
+border-radius: 4px;
 
 }
 
 li {
-
 width: 200px;
 list-style-type: none;
 border-radius: 4px;
 border: 1px solid #d4d4d4;
-text-align: center;
+text-align:left;
 cursor: pointer;
 font: 16px;
 margin: 4px;
@@ -30,10 +29,8 @@ background-color: #f1f1f1;
 
 li:hover { 
 background-color: white;
-
-
-
 }
+
 li:first-child { 
 font-weight: bold;
 background-color: #04AA6D;
@@ -76,8 +73,8 @@ font-size: 70%;
 background-color: #f1f1f1;
 padding: 10px;
 line-height: 14px;
+}
 
- }
 #top, li, #sidebar, #bottom {
 
 padding: 10px;
@@ -98,7 +95,7 @@ text-decoration: underline;
 
 #bottom p{ 
 background-color: #f1f1f1;
-
+border: 1px solid #d4d4d4;
 }
 
 /*
