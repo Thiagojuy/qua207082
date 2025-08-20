@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Marca</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            border: none;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;            
+            align-items: center;
+            background-color: gray;
+            color: white;
+            padding: 5px 30px;
+        }
+
+        nav a {
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            margin: 0px 2px;
+        }
+
+        #principal{
+            display: flex;
+        }
+
+        #principal div{
+            width: 50%;
+            margin: 30px;
+            text-align: left;
+        }
+
+        #principal h2{
+            font-size: 200%;
+        }
+
+        #principal p{
+            margin-top: 20px;
+            font-size: 90%;
+        }
+
+        #principal button{
+            padding: 20px;
+            margin: 30px 0px;
+            width: 300px;
+            background-color: gray;
+            border: 2px solid black;
+            font-weight: bold;
+        }
+
+        #principal iframe{
+            width: 100%;
+            height: 100%;
+        }
+
+        #carrossel {
+            display: flex;
+            justify-content: center;
+        }
+
+        #carrossel div{
+            height: 130px;
+            width: 200px;
+            background-color: gray;
+            margin: 10px;
+        }
+
+        #noticias{
+
+            display: flex;
+            flex-wrap: wrap;
+           justify-content: space-between;
+        }
+
+        .noticias{
+        width: 300px;
+        }
+
+        .noticias div{
+
+            border: 2px solid black;
+            border-radius: 100%;
+            float: left;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            }
+
+        .noticias h3{
+
+            font-size: xx-large;
+        }
+
+        .noticias p{
+
+       }
+
+       #depoimentos{
+
+        display: flex;
+       }
+
+       
+       .depoimento{
+        display: flex;
+        
+       padding: 30px;
+       }
+
+       footer{
+        text-align: center;
+        background-color: gray;
+        padding: 20px;
+        color: white;
+       }
+
+
+       .foto{
+        width: 150px;
+        background-color: gray;
+        margin-right: 15px;
+       height: 150px;
+       float: left;
+       }
+       
+       body {
+        width: 1000px;
+        margin: auto;
+        border: 2px solid gray;
+
+       }
+
+       hr{
+border: 1px solid gray;
+width: 80%;
+margin: auto;
+
+       }
+
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Logo</h1>
+        <nav>
+            <a href="#">A</a>
+            <a href="#">B</a>
+            <a href="#">C</a>
+        </nav>
+    </header>
+    <section id="principal">
+        <div>
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <button>CTA Button</button>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/tNobiwuAaAg?si=i2CUHtTka1ab2uEf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <HR></HR>
+    <section id="carrossel">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <HR></HR>
+    <section id="noticias">
+        <div class="noticias">
+            <div>6</div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem Ipsum dolor sit amet, consectur adipsicing elt sed do elumod tempor</p>
+        </div>
+        <div class="noticias">
+            <div>6</div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem Ipsum dolor sit amet, consectur adipsicing elt sed do elumod tempor</p>
+        </div>
+        <div class="noticias">
+            <div>6</div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem Ipsum dolor sit amet, consectur adipsicing elt sed do elumod tempor</p>
+        </div>
+        <div class="noticias">
+            <div>6</div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem Ipsum dolor sit amet, consectur adipsicing elt sed do elumod tempor</p>
+        </div>
+        <div class="noticias">
+            <div>6</div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem Ipsum dolor sit amet, consectur adipsicing elt sed do elumod tempor</p>
+        </div>
+        <div class="noticias">
+            <div>6</div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem Ipsum dolor sit amet, consectur adipsicing elt sed do elumod tempor</p>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <div class="depoimento">
+        <div class="foto"></div>
+        <p>primeiro depoimento</p>
+        </div>
+
+        <div class="depoimento">
+        <div class="foto"></div>
+        <p>segundo depoimento</p>
+        </div>
+    </section>
+
+    <footer>
+    não conseguir ler também
+    </footer>
+</body>
+</html>
