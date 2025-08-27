@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Marca</title>
+    <title>Paixão tricolor</title>
     <style>
         *{
             margin: 0;
             padding: 0;
             text-decoration: none;
             border: none;
+            
         }
 
         header{
             display: flex;
             justify-content: space-between;
-            border: 2px solid blue;
+            border: 2px solid green;
             align-items: center;
-            color: blue;
-            background-color: #00f7ff;
+            color: green;
+            background-color:rgba(255, 0, 0, 0.815);
         }
 
         nav a {
@@ -31,18 +32,36 @@
         #principal {
             background-color: oklch(85.042% 0.1079 195.366);
             text-align: center;
+            display: flex;
+
         }
 
         #principal h2{
             padding-top: 45px;
+            height: 10px;
+            font-size: 200%;
         }
 
         #principal p{
-            padding-top: 20px;
-            max-width: 400px;
+            padding : 0px;
             margin: auto;
+            
+            font-size: 20px;
         }
 
+        #principal h2, p{
+            padding-left: 10px;
+            font-size: height: 50px;
+            text-align: center;
+        }
+
+        
+
+        #principal iframe {
+            width: 100%;
+            height: 200px;
+                       
+        }
         #botao {            
             display: flex;  
             justify-content: space-evenly
@@ -53,8 +72,9 @@
             margin: 40px auto;
             border-radius: 10px;
             font-size: medium;
-            color: blue;
+            color: green;
             text-decoration: solid 2px;
+            cursor: pointer;
         }
 
         
@@ -74,6 +94,19 @@
             text-align: center;
         }
 
+        #depoimentos .falas{
+            border-radius: 5px;
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+           display: flex;
+            background-color: oklch(65.531% 0.1366 267.492);
+
+        }
+
+
+        
         .caixa h3{
             padding-bottom: 10px;
 
@@ -87,18 +120,28 @@
 
         #depoimentos *{
             padding: 10px;
+            display: flex;
+        }
+
+        #depoimentos h2{
+            font-size: xx-large;
+            margin: auto;
         }
 
         footer{
             background-color: blue;
             color: white;
             text-align: end;
+            width: 100%;
+            height:50px;
         }
 
         body{
             max-width: 1500px;
             margin: auto;
-            background-color: white
+            background-color: white;
+            border: 2px solid blue;
+
         }
         #conteiner{
             display: flex;
@@ -107,7 +150,7 @@
             justify-content: space-between;
         }
 
-#carrossel {
+        #carrossel {
             display: flex;
             justify-content: center;
         }
@@ -127,11 +170,11 @@
 
         #carrossel-container div {
 
-            height: 130px;
+            height: 150px;
             min-width: 200px;
             background-color: gray;
             margin: 10px;
-
+            
         }
 
         #bt-left,
@@ -157,7 +200,7 @@
     <div id="conteiner">
     <div id="grupo01">
     <header>
-        <h1>Energy Storage Systems (ESS)</h1>
+        <h1>Sou tricolor de Coração</h1>
         <nav>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
             <a href="#"><i class="fa-brands fa-apple"></i></a>
@@ -165,9 +208,12 @@
         </nav>
     </header>
     <section id="principal">
-        <h2> A maior empresa de estocagem de vento do mundo</h2>
-        <p>Venha conhecer a maior empresa de estocagem de vento do mundo!
+        <h2> A melhor torcida do Brasil </h2>
+        <p>Venha conhecer o time mais tradicional do Brasil!
         </p>
+        <div>
+        <iframe width="1008" height="557" src="https://www.youtube.com/embed/urC2gCIF3W0" title="Gol de John Kennedy | Boca Juniors 1x2 Fluminense | Narração Globo (COM HINO)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </div>
     </section>
     <section id="botao">
         <button>Quero Começar Agora</button>
@@ -202,10 +248,14 @@
     <div id="grupo02">
 
     <section id="depoimentos">
-        <h2>O que nossos clientes dizem</h2>
-        <p>"Despois de estocar o vento, passei a cultuar a mandioca"</p>
-        <p>"Excelente opção de passatempo"</p>
-    </section>
+        <h2>O que nossos clientes dizem:</h2>
+        <div class="falas">
+           <p>"Despois de estocar o vento, passei a cultuar a mandioca"</p>
+        </div>
+        <div class="falas">
+           <p>"Excelente opção de passatempo"</p>
+        </div>
+        </section>
     <footer>
         &copy; 2025 Antanóia - Todos os direitos reservados.
     </footer>
