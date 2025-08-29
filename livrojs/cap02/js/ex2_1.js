@@ -2,8 +2,8 @@
 const frm = document.querySelector("form");
 const resp = document.querySelector("h3");
 // cria um "ouvinte" de evento, acionado quando o botão submit do form for clicado
-frm.addEventListener("submit", (e) => {
-const nome = frm.inNome.value; // obtém o nome digitado no form
-resp.innerText = `Olá ${nome}` // exibe a resposta do programa
-e.preventDefault() // evitar o envio do form
+frm.addEventListener("keyup", (e) => {
+    const nome = frm.inNome.value; // obtém o nome digitado no form
+    resp.innerText = `Olá ${nome}` // exibe a resposta do programa
+    e.preventDefault() // evitar o envio do form
 })
