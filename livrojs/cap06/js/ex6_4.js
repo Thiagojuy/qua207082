@@ -43,21 +43,25 @@ frm.btResumir.addEventListener("click", () => {
       nomes.push(nome)                      // adiciona ao vetor nomes
     }
     else {                                  // senão, monta o resumo para cada idade
-      resumo += aux + " ano(s): " + nomes.length + " criança(s) - "
-      resumo += ((nomes.length / copia.length) * 100).toFixed(2) + "%\n"
-      resumo += "(" + nomes.join(", ") + ")\n\n"
+      resumo = atualizarResumo(resumo, aux, nomes, copia)
       aux = idade                           // obtém a nova idade na ordem
       nomes = []                            // limpa o vetor dos nomes
       nomes.push(nome)                      // adiciona o primeiro da nova idade
     }
   }
   // adiciona a última criança
-  resumo += aux + " ano(s): " + nomes.length + " criança(s) - "
-  resumo += ((nomes.length / copia.length) * 100).toFixed(2) + "%\n"
-  resumo += "(" + nomes.join(", ") + ")\n\n"
+  resumo = atualizarResumo(resumo, aux, nomes, copia)
   resp.innerText = resumo                  // exibe a resposta 
 })
 
+
+function atualizarResumo(resumo, aux, nomes, copia) {
+ resumo += aux + " ano(s): " + nomes.length + " criança(s) - "
+ resumo += ((nomes.length / copia.length) * 100).toFixed(2) + "%\n"
+ resumo += "(" + nomes.join(", ") + ")\n\n"
+    return resumo
+
+}
 
 
 
