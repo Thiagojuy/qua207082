@@ -1,5 +1,6 @@
 const frm = document.querySelector("form") // obtém elementos da página
 const resp = document.querySelector("h3")
+const btDecript = document.querySelector("#btDecript");
 
 frm.addEventListener("submit", (e) => {          // "escuta" evento submit do form
   e.preventDefault()                             // evita envio do form
