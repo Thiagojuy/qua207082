@@ -1,0 +1,28 @@
+<script>
+const calculaMedia = (...notas) => {
+const num = notas.length
+if(num == 0){
+console.log("Infomre, no mínimo, 1 nota")
+return
+} 
+
+let soma = 0
+for (const nota of notas) {
+    soma += nota;
+}
+
+const media = soma / num
+console.log (`Média: $(media.toFixed(2)}`)
+
+}
+
+// exemplos chamando a function calculaMedia
+calculaMedia(6,7,8)
+calculaMedia(2,10)
+calculaMedia(7.5,10,8,9.5)
+calculaMedia() // vai retornar "Informe, no mínimo, 1 nota"
+
+
+
+
+</script>
