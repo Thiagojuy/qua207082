@@ -38,3 +38,21 @@ const verCategoria = idade => {
   }
   return cat
 }
+
+
+/* 
+
+function retornarTracos(nome) {
+let retorno = ""
+for (const letra of nome) {
+    retorno += (letra != "") ? "-" : ""
+}
+    return retorno
+
+}
+
+
+function categorizarAluno(idade){
+    return (idade <= 12) ? "infantil" : (idade <= 17) ? "juvenil" : "adulto"
+}
+*/
