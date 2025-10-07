@@ -33,3 +33,12 @@ frm.rbSim.addEventListener("change", () => {
 frm.rbNao.addEventListener("change", () => {
   convenio.className = "oculta"
 })
+
+/*
+
+
+
+
+
+
+*/
