@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Lista de Tarefas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,13 +14,12 @@
         <form>
             <div class="row">
                 <div class="col-md-8">
-                    <label for="inItem" class "form-label">Item</label>
+                    <label for="inItem" class="form-label">Item:</label>
                     <input type="text" id="inItem" class="form-control" required>
                 </div>
-
                 <div class="col-md-4">
-                    <label for="inStatus" class "form-label">Status</label>
-                    <select name="text" id="inStatus" class="form-select" required>
+                    <label for="inStatus" class="form-label">Status:</label>
+                    <select name="status" id="inStatus" class="form-select" required>
                         <option value="">Selecione</option>
                         <option>Em Fila</option>
                         <option>Iniciado</option>
@@ -29,27 +28,40 @@
                 </div>
             </div>
             <div class="float-end">
-                <input type="button" class="mt-3 btn btn-danger" value="Apagar" id="btApagar">
+                <input type="button" class="mt-3 btn btn-danger" value="Apagar" id="btApagar" disabled>
                 <input type="submit" class="mt-3 btn btn-secondary" value="Gravar" id="btGravar">
-                <input type="reset" class="mt-3 btn btn-primary" value="Novo" id="btNovo">
+                <input type="reset" onclick="limpar()" class="mt-3 btn btn-primary" value="Novo" id="btNovo">
             </div>
-            <input type="hidden">
-        </form>
-        <TABle class="table table-hover">
-            <THead>
-                <TR>
-                    <TH>Item da Lista</TH>
-                    <TH>Status</TH>
-                </TR>
-            </THead>
+            <input type="hidden" id="inIndex">
+            <!-- filtros da tabela-->
+            <div class="mt-3">
+                <label for="" class="form-label"> Filtros: </label>
 
-            <body>
+                <input type="checkbox" id="btEnfila" value="Em Fila" class="form-check-input">
+                <label for="btEnfila" class="form-check-label">Em Fila</label>
+
+                <input type="checkbox" id="btIniciado" value="Iniciado" class="form-check-input">
+                <label for="btIniciado" class="form-check-label">Iniciado</label>
+
+                <input type="checkbox" id="btConcluido" value="Concluido" class="form-check-input">
+                <label for="btConcluido" class="form-check-label">Concluido</label>
+            </div>
+        </form>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Item da Lista</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>Lista Vazia</td>
                     <td>-</td>
                 </tr>
-        </TABle>
-    </DIV>
+            </tbody>
+        </table>
+    </div>
     <script src="js/script.js"></script>
 </body>
 
