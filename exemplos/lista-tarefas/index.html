@@ -33,18 +33,19 @@
                 <input type="reset" onclick="limpar()" class="mt-3 btn btn-primary" value="Novo" id="btNovo">
             </div>
             <input type="hidden" id="inIndex">
-            <!-- filtros da tabela-->
-            <div class="mt-3">
-                <label for="" class="form-label"> Filtros: </label>
+            <input type="hidden" id="lineNumber">
+            <!-- filtros da tabela -->
+             <div class="mt-3">
+            <label for="" class="form-label">Filtros: </label>
 
-                <input type="checkbox" id="btEnfila" value="Em Fila" class="form-check-input">
-                <label for="btEnfila" class="form-check-label">Em Fila</label>
+            <input type="checkbox" id="btEmFila" value="Em Fila" class="form-check-input border-2">
+            <label for="btEmFila" class="form-ckeck-label">Em Fila</label>
 
-                <input type="checkbox" id="btIniciado" value="Iniciado" class="form-check-input">
-                <label for="btIniciado" class="form-check-label">Iniciado</label>
+            <input type="checkbox" id="btIniciado" value="Iniciado" class="form-check-input border-2">
+            <label for="btIniciado" class="form-ckeck-label">Iniciado</label>
 
-                <input type="checkbox" id="btConcluido" value="Concluído" class="form-check-input">
-                <label for="btConcluido" class="form-check-label">Concluido</label>
+            <input type="checkbox" id="btConcluido" value="Concluído" class="form-check-input border-2">
+            <label for="btConcluido" class="form-ckeck-label">Concluído</label>
             </div>
         </form>
         <table class="table table-hover">
