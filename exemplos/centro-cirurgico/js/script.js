@@ -5,13 +5,15 @@ frm.addEventListener("submit", (e) => {
     e.preventDefault()
     const paciente = frm.inPaciente.value
     const status = frm.inStatus.value
+
     const local = frm.inLocal.value
     const previsto = frm.inPrevisto.value
     const inicio = frm.inInicio.value
     const fim = frm.inFim.value
     const saida = frm.inSaida.value
+
     const index = frm.inIndex.value
-    // incluir ou atualizar
+
     index == "" ? lsItem.push({ paciente, status, local, previsto, inicio, fim, saida, }) : lsItem[index] = { paciente, status, local, previsto, inicio, fim, saida }
     atualizarTabela()
 })
@@ -42,10 +44,10 @@ frm.btApagar.addEventListener("click", () => {
 
 })
 
-const cores = {
-    "Transferido": "bg-secondary-subtle",
-    "Em recuperação": "bg-primary-subtle",
-    "Pré-Operatório": "bg-danger-subtle"
+const coresStatus = {
+    "Transferido": "#fbd972",
+    "Em recuperação": "#89e89f",
+    "Pré-Operatório": "#b8daff"
 }
 
 function atualizarTabela() {
@@ -54,16 +56,24 @@ function atualizarTabela() {
     tbody.innerHTML = ""
     let cont = 0
     for (i of lsItem) {
-        if (filtro == "" || filtro.includes(i.status)) {
-            tbody.innerHTML +=
-                `<tr onclick="prepararEdicao(${cont})" >
-                <td>${i.item}</td>
-                <td class="${cores[i.status]}">${i.status}</td>
+
+        const cor = coresStatus[i.status]
+
+        tbody.innerHTML +=
+            `<tr onclick="prepararEdicao(${cont})" >
+                 <td>${i.item}</td>
+          <td style="background-color:${cor}">
+            ${i.status} (${i.local})
+          </td>
+          <td>${i.inprevisto}</td>
+          <td>${i.incirurgia}</td>
+          <td>${i.fimcirurgia}</td>
+          <td>${i.saidaprev}</td>    
             </tr>`
-        }
-        cont++
     }
+    cont++
 }
+
 
 function limpar() {
     frm.inPaciente.value = ""
@@ -74,6 +84,7 @@ function limpar() {
     frm.inFim.value = ""
     frm.inSaida.value = ""
     frm.inIndex.value = ""
+    frm.inPaciente.focus()
     frm.btApagar.disabled = true
 }
 
