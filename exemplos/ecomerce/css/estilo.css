@@ -6,8 +6,8 @@
 }
 
 .container {
-  width: 80%;
-  height: 100vh;
+  width: 785px;
+ /* height: 100vh;*/
   background-color: #efedec;
   margin: auto;
   padding: 50px;
@@ -33,9 +33,11 @@ p {
   border-radius: 100%;
   width: 50px;
   height: 50px;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .esquerdo {
@@ -51,11 +53,58 @@ p {
   filter: invert(1);
 }
 
-#btVela #qt{
+#btVela #qt {
+  background-color: gray;
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  border-radius: 100%;
+  color: white;
+  padding: 0px 5px;
+  font-weight: bold;
+}
 
-background-color: white;
-position: absolute;
-top: 0px;
-right: 0px;
+#produtos {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+}
 
+.produto {
+  background-color: white;
+  text-align: center;
+  width: 210px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+
+.produto img{
+width: 210px;
+height: 210px;
+margin-bottom: 10px;
+cursor: pointer;
+
+}
+
+.nome{
+font-family: "Trocchi", serif;
+  
+}
+
+.descricao, .valor{
+
+font-family: "Quattrocento", serif;
+}
+
+.descricao{
+
+  font-size: small;
+}
+
+.valor{
+
+  margin-top: 20px;
+  font-weight: bold;
 }
