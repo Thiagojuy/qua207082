@@ -7,7 +7,7 @@
 
 .container {
   width: 785px;
- /* height: 100vh;*/
+  /* height: 100vh;*/
   background-color: #efedec;
   margin: auto;
   padding: 50px;
@@ -77,34 +77,61 @@ p {
   width: 210px;
   padding: 20px;
   margin-bottom: 20px;
-
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+  position: relative;
 }
 
-.produto img{
-width: 210px;
-height: 210px;
-margin-bottom: 10px;
-cursor: pointer;
-
+.produto > div > img {
+  display: none;
 }
 
-.nome{
-font-family: "Trocchi", serif;
-  
+.marcado > div > img {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 128px;
+  height: 128px;
+  filter: invert(1);
+  display: block;
 }
 
-.descricao, .valor{
-
-font-family: "Quattrocento", serif;
+.produto:hover {
+  box-shadow: 0px 0px 7px 0px #3b0a0a;
 }
 
-.descricao{
+.marcado {
+  background-color: #3b0a0a;
+}
 
+.marcado p {
+  color: white;
+}
+
+.marcado > img {
+  opacity: 0.7;
+}
+
+.produto > img {
+  width: 210px;
+  height: 210px;
+  margin-bottom: 10px;
+}
+
+.nome {
+  font-family: "Trocchi", serif;
+}
+
+.descricao,
+.valor {
+  font-family: "Quattrocento", serif;
+}
+
+.descricao {
   font-size: small;
 }
 
-.valor{
-
+.valor {
   margin-top: 20px;
   font-weight: bold;
 }
