@@ -1,5 +1,6 @@
 const original = document.querySelector(".produto")
-const produtos = document.querySelector("#produtos")
+const produtos = document.querySelector(".produtos")
+const divCarrinho = document.querySelector(".carrinho")
 
 produtos.innerHTML = ""
 for (const p of lsProduto) {
@@ -18,11 +19,11 @@ document.querySelectorAll(".produto").forEach((p, i) => {
 
     p.addEventListener("click", () => {
         p.classList.toggle("marcado")
-        if (lsProduto[i].marcado == undefined) {
-            lsProduto[i].marcado = 1
+        if (lsProduto[i].qt == undefined) {
+            lsProduto[i].qt = 1
         }
         else {
-            delete lsProduto[i].marcado
+            delete lsProduto[i].qt
 
         }
 
@@ -32,21 +33,80 @@ document.querySelectorAll(".produto").forEach((p, i) => {
 })
 
 function atualizarQt() {
-    const qt = lsProduto.filter(p => p.marcado == 1)
+    const qt = lsProduto.filter(p => p.qt >= 1)
     document.querySelector("#qt").innerText = qt.length > 0 ? qt.length : ""
 }
 
 document.querySelector("#btVela").addEventListener("click", carrinho)
 
 function carrinho() {
-    document.querySelector("#qt").innerText
+    const qt = document.querySelector("#qt").innerText
     if (qt == "") {
 
         alert("Necessário selecionar 1 item.")
         return
     }
+    produtos.classList.toggle("ocultar")
+    divCarrinho.classList.toggle("ocultar")
+    atualizarTb()
+}
+let pedido
+function atualizarTb() {
+    pedido = ""
+    let total = 0
+    const tbody = document.querySelector("tbody")
+    tbody.innerHTML = ""
+    for (let i = 0; i < lsProduto.length; i++) {
+        const p = lsProduto[i]
+        if (p.qt > 0) {
+            tbody.innerHTML += `<tr>
+            <td>${p.nome}</td>
+            <td>${p.qt}</td>
+            <td>${p.valor.toFixed(2)}</td>
+            <td>${(p.qt * p.valor).toFixed(2)}</td>
+            <td onclick="add(${i}, 1)">+</td>
+            <td onclick="add(${i},-1)">-</td>
+            </tr>
+            `
+            total += p.qt * p.valor
+            pedido += `${p.nome} (${p.qt}x${p.valor} = ${p.valor*p.qt})\n`
+        }
 
+    }
+
+    tbody.innerHTML += `
+    <tr>
+    <td colspan="3">Valor Final</td>
+    <td colspan="3">${total.toFixed(2)}</td>
+     </tr>
+ 
+     `
+.     pedido += `Total = ${total.toFixed(2)}`
 }
 
+
+function add(i, valor) {
+    lsProduto[i].qt += valor
+    atualizarTb()
+    if (lsProduto[i].qt == 0) {
+
+        document.querySelectorAll(".produto")[i].dispatchEvent(new Event("click"))
+    }
+    const qt = lsProduto.filter(p => p.qt >= 1)
+    if (qt == "") {
+        produtos.classList.toggle("ocultar")
+        divCarrinho.classList.toggle("ocultar")
+    }
+}
+
+const frm = document.querySelector("form")
+frm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const nome = frm.inNome.value
+    let msg = "deseja fazer o seguinte pedido!\n"
+    msg += pedido
+    msg += `Att: ${nome}`
+    alert(msg)
+})
 
 

@@ -64,7 +64,7 @@ p {
   font-weight: bold;
 }
 
-#produtos {
+.produtos {
   margin-top: 80px;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -134,4 +134,65 @@ p {
 .valor {
   margin-top: 20px;
   font-weight: bold;
+}
+
+.ocultar{
+  display: none;
+}
+.carrinho{
+
+  margin-top: 80px;
+}
+
+td{
+
+  background-color: #3b0a0a;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+td[onclick]:hover{
+cursor: pointer;
+background-color: #775858;
+
+}
+
+form{
+
+  margin-top: 20px;
+
+}
+
+form label{
+
+  color: #3b0a0a;
+  font-family: "trocchi", serif;
+}
+
+form input{
+
+  border: none;
+
+}
+
+form #inNome{
+padding: 5px;
+width: 300px;
+border: #3b0a0a solid 1px;
+}
+
+form input[value]{
+background-color: #3b0a0a;
+padding: 5px 10px;
+color: white;
+font-size: large;
+cursor: pointer;
+border-radius:10px;
+}
+
+form input[value]:hover{
+background-color: gray;
+color: #3b0a0a;
+border: #3b0a0a solid 1px;
 }
