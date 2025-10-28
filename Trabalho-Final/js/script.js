@@ -9,7 +9,7 @@ for (const p of lsProduto) {
     clone.querySelector(".nome").innerText = p.nome
     clone.querySelector(".descricao").innerText = p.descricao
     clone.querySelector("img").src = p.img
-    clone.querySelector(".valor").innerText = `R$ ${p.valor.toFixed(2)}`
+    clone.querySelector(".valor").innerText = `R$ ${p.valor.toFixed(2).toString().replace(".", ",")}`
     produtos.appendChild(clone)
 
 
@@ -69,7 +69,7 @@ function atualizarTb() {
             </tr>
             `
             total += p.qt * p.valor
-            pedido += `${p.nome} (${p.qt}x${p.valor} = ${p.valor * p.qt})\n`
+            pedido += `${p.nome} (${p.qt}x${p.valor} = ${p.valor*p.qt})\n`
         }
 
     }
@@ -81,7 +81,7 @@ function atualizarTb() {
      </tr>
  
      `
-        .pedido += `Total = ${total.toFixed(2)}`
+        .pedido += `Total = ${total.toFixed(2)}\n`
 }
 
 
