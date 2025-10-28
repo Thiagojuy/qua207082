@@ -1,70 +1,70 @@
 const lsProduto = [
     {
 
-        nome: "Banho de Mar",
-        descricao: "Vela Aromática - 300g",
+        nome: "Carbon",
+        descricao: "Chuteira para atacante",
         img: "img/chuteira1.jpeg",
-        valor: 59
+        valor: 999
     },
     {
 
-        nome: "Passeio na Floresta",
-        descricao: "Vela Aromática - 300g",
+        nome: "Pegasus 3",
+        descricao: "Para quem gosta de velocidade",
         img: "img/chuteira2.jpeg",
-        valor: 39
+        valor: 599
     },
 
     {
 
-        nome: "Trio Bom dia",
-        descricao: "Vela Aromática - 300g",
-        img: "img/vela-03.png",
-        valor: 99
+        nome: "Art 4",
+        descricao: "A melhor precisão",
+        img: "img/chuteira3.jpeg",
+        valor: 999
     },
 
     {
-        nome: "Meus Cristais",
-        descricao: "Vela Aromática - 300g",
-        img: "img/vela-04.png",
-        valor: 49
-    },
-
-    {
-
-        nome: "Campo de Lavanda",
-        descricao: "Vela Aromática - 300g",
-        img: "img/vela-05.png",
-        valor: 39
+        nome: "Creative",
+        descricao: "Super leve",
+        img: "img/chuteira4.jpeg",
+        valor: 799
     },
 
     {
 
-        nome: "Minha Rotina",
-        descricao: "Vela Aromática - 300g",
-        img: "img/vela-06.png",
-        valor: 79
-    },
-
-    {
-        nome: "Vida no Campo",
-        descricao: "Vela Aromática - 300g",
-        img: "img/vela-07.png",
-        valor: 89
-    },
-    {
-
-        nome: "Meu Momento",
-        descricao: "Vela Aromática - 300g",
-        img: "img/vela-08.png",
-        valor: 79
+        nome: "Garra 5",
+        descricao: "Força e Segurança",
+        img: "img/chuteira5.jpeg",
+        valor: 599
     },
 
     {
 
-        nome: "Flores Vivas",
-        descricao: "Vela Aromática - 300g",
-        img: "img/vela-09.png",
-        valor: 69
+        nome: "Focus 2",
+        descricao: "Super leve",
+        img: "img/chuteira6.jpeg",
+        valor: 699
+    },
+
+    {
+        nome: "Estilo",
+        descricao: "Foco na arrancada",
+        img: "img/chuteira7.jpeg",
+        valor: 899
+    },
+    {
+
+        nome: "Elite R10",
+        descricao: "Força e leveza juntas",
+        img: "img/chuteira8.jpeg",
+        valor: 1699
+    },
+
+    {
+
+        nome: "Venon R9",
+        descricao: "Para os atletas de alto rendimento",
+        img: "img/chuteira9.jpeg",
+        valor: 1999
     }
 
 

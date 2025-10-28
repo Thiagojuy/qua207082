@@ -28,7 +28,7 @@ p {
   color: #3b0a0a;
 }
 
-#btVela {
+#btChuteira {
   background-color: #3b0a0a;
   border-radius: 100%;
   width: 50px;
@@ -48,12 +48,12 @@ p {
   float: right;
 }
 
-#btVela img {
+#btChuteira img {
   height: 80%;
   filter: invert(1);
 }
 
-#btVela #qt {
+#btChuteira #qt {
   background-color: gray;
   position: absolute;
   top: -3px;
